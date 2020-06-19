@@ -1,0 +1,25 @@
+From 91bf685fd511a583cd255f0b9cb6fc1943aa995e Mon Sep 17 00:00:00 2001
+From: Bilal Elmoussaoui <bil.elmoussaoui@gmail.com>
+Date: Mon, 27 Apr 2020 21:46:02 +0000
+Subject: [PATCH] Apply suggestion to
+ debug-viewer/org.freedesktop.GstDebugViewer.appdata.xml.in
+
+Part-of: <https://gitlab.freedesktop.org/gstreamer/gst-devtools/-/merge_requests/155>
+---
+ debug-viewer/org.freedesktop.GstDebugViewer.appdata.xml.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/debug-viewer/org.freedesktop.GstDebugViewer.appdata.xml.in b/debug-viewer/org.freedesktop.GstDebugViewer.appdata.xml.in
+index 45262280..e875b106 100644
+--- a/debug-viewer/org.freedesktop.GstDebugViewer.appdata.xml.in
++++ b/debug-viewer/org.freedesktop.GstDebugViewer.appdata.xml.in
+@@ -19,5 +19,5 @@
+   <releases>
+     <release version="1.16.2" date="2019-12-03" />
+     <release version="1.16.1" date="2019-09-23" />
+-  <releases>
++  </releases>
+ </component>
+-- 
+2.26.2
+

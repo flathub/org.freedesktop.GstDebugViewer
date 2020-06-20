@@ -41,6 +41,10 @@
                 {
                     "type": "patch",
                     "path": "patches/0001-Apply-suggestion-to-debug-viewer-org.freedesktop.Gst.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/0001-debug-viewer-Add-screenshot.patch"
                 }
             ]
         }

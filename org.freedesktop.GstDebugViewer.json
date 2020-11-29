@@ -2,9 +2,11 @@
     "app-id" : "org.freedesktop.GstDebugViewer",
     "branch" : "stable",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.36",
+    "runtime-version" : "3.38",
     "sdk" : "org.gnome.Sdk",
     "command" : "gst-debug-viewer",
+    "rename-icon" : "gst-debug-viewer",
+    "copy-icon" : true,
     "finish-args" : [
         "--socket=x11",
         "--share=ipc",
@@ -45,6 +47,10 @@
                 {
                     "type": "patch",
                     "path": "patches/0001-debug-viewer-Add-screenshot.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/0001-debug-viewer-Make-appdata-valid-again.patch"
                 }
             ]
         }

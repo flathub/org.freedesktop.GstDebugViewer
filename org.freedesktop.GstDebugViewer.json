@@ -2,7 +2,7 @@
     "app-id" : "org.freedesktop.GstDebugViewer",
     "branch" : "stable",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.38",
+    "runtime-version" : "40",
     "sdk" : "org.gnome.Sdk",
     "command" : "gst-debug-viewer",
     "rename-icon" : "gst-debug-viewer",

@@ -2,7 +2,7 @@
     "app-id" : "org.freedesktop.GstDebugViewer",
     "branch" : "stable",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "42",
+    "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",
     "command" : "gst-debug-viewer",
     "rename-icon" : "gst-debug-viewer",
@@ -23,9 +23,9 @@
         {
             "name" : "gst-debug-viewer",
             "buildsystem" : "meson",
+            "subdir": "subprojects/gst-devtools",
             "config-opts": [
                 "-Dvalidate=disabled",
-                "-Dgtk_doc=disabled",
                 "-Dintrospection=disabled",
                 "-Dtests=disabled",
                 "-Ddebug_viewer=enabled"
@@ -33,16 +33,12 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "branch" : "1.18.6",
-     		            "commit": "5c8e4b99864162f90c6e1c1946229c604067ac03",
-                    "url": "https://gitlab.freedesktop.org/gstreamer/gst-devtools.git"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/0001-debug-viewer-Make-appdata-valid-again.patch"
+  		              "disable-submodules": true,
+                    "tag" : "1.20.5",
+     		            "commit": "f7806a854aad960eae3288db4a67a574f92428fe",
+                    "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git"
                 }
             ]
         }
     ]
 }
-

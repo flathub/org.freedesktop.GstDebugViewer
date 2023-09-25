@@ -1,28 +1,21 @@
 {
-    "app-id" : "org.freedesktop.GstDebugViewer",
-    "branch" : "stable",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "43",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "gst-debug-viewer",
-    "rename-icon" : "gst-debug-viewer",
-    "copy-icon" : true,
-    "finish-args" : [
-        "--socket=x11",
+    "app-id": "org.freedesktop.GstDebugViewer",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "45",
+    "sdk": "org.gnome.Sdk",
+    "command": "gst-debug-viewer",
+    "rename-icon": "gst-debug-viewer",
+    "copy-icon": true,
+    "finish-args": [
+        "--device=dri",
         "--share=ipc",
-        "--socket=wayland",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--talk-name=org.freedesktop.Notifications",
-        "--filesystem=host",
-        "--device=dri"
+        "--socket=fallback-x11",
+        "--socket=wayland"
     ],
-    "modules" : [
+    "modules": [
         {
-            "name" : "gst-debug-viewer",
-            "buildsystem" : "meson",
+            "name": "gst-debug-viewer",
+            "buildsystem": "meson",
             "subdir": "subprojects/gst-devtools",
             "config-opts": [
                 "-Dvalidate=disabled",
@@ -30,13 +23,31 @@
                 "-Dtests=disabled",
                 "-Ddebug_viewer=enabled"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "git",
-  		              "disable-submodules": true,
-                    "tag" : "1.20.5",
-     		            "commit": "f7806a854aad960eae3288db4a67a574f92428fe",
-                    "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git"
+                    "type": "git",
+                    "disable-submodules": true,
+                    "tag": "1.22.6",
+                    "commit": "ddb4fbe43149b157efb52b6472313f48308c1dbc",
+                    "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1263,
+                        "stable-only": true,
+                        "tag-template": "$version"
+                    }
+                },
+                {
+                    "type": "patch",
+                    "path": "gettext-py310-mr5027.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "chooser_native.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "find_bar_none.patch"
                 }
             ]
         }

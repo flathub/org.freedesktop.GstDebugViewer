@@ -1,0 +1,28 @@
+From 98217f1892ea2472e1c0456bf4c407daf7e28ca2 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Olivier=20Cr=C3=AAte?= <olivier.crete@collabora.com>
+Date: Wed, 12 Jul 2023 14:57:28 -0600
+Subject: [PATCH] debug-viewer: Remove unnecessary call to
+ gettext.bind_textdomain_codeset()
+
+It has been deprecated in Python 3.8 and removed in 3.10
+
+Part-of: <https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/5027>
+---
+ .../gst-devtools/debug-viewer/GstDebugViewer/Common/Main.py      | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/subprojects/gst-devtools/debug-viewer/GstDebugViewer/Common/Main.py b/subprojects/gst-devtools/debug-viewer/GstDebugViewer/Common/Main.py
+index e7f8552ce84..c57f5fa6fed 100644
+--- a/subprojects/gst-devtools/debug-viewer/GstDebugViewer/Common/Main.py
++++ b/subprojects/gst-devtools/debug-viewer/GstDebugViewer/Common/Main.py
+@@ -314,7 +314,6 @@ def _init_locale(gettext_domain=None):
+         else:
+             gettext.bindtextdomain(gettext_domain, Paths.locale_dir)
+             gettext.textdomain(gettext_domain)
+-            gettext.bind_textdomain_codeset(gettext_domain, "UTF-8")
+ 
+ 
+ def _init_logging(level):
+-- 
+GitLab
+

@@ -2,7 +2,7 @@
     "app-id" : "org.freedesktop.GstDebugViewer",
     "branch" : "stable",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "43",
+    "runtime-version" : "45",
     "sdk" : "org.gnome.Sdk",
     "command" : "gst-debug-viewer",
     "rename-icon" : "gst-debug-viewer",
@@ -33,9 +33,9 @@
             "sources" : [
                 {
                     "type" : "git",
-  		              "disable-submodules": true,
-                    "tag" : "1.20.5",
-     		            "commit": "f7806a854aad960eae3288db4a67a574f92428fe",
+  		            "disable-submodules": true,
+                    "tag" : "1.22.5",
+     		        "commit": "bf6ce1d64a0697e7910826147b48f8f658366a5a",
                     "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git"
                 }
             ]

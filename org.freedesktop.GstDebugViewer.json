@@ -28,8 +28,8 @@
                 {
                     "type": "git",
                     "disable-submodules": true,
-                    "tag": "1.22.6",
-                    "commit": "ddb4fbe43149b157efb52b6472313f48308c1dbc",
+                    "tag": "1.24.0",
+                    "commit": "b125253cade5432e535ef2ea848ac00d2fb5286d",
                     "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git",
                     "x-checker-data": {
                         "type": "anitya",

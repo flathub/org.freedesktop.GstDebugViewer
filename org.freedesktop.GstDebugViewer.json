@@ -30,13 +30,7 @@
                     "disable-submodules": true,
                     "tag": "1.24.7",
                     "commit": "0f1e984e41ce8d6d0758265d35e8b10d5815fde2",
-                    "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 1263,
-                        "stable-only": true,
-                        "tag-template": "$version"
-                    }
+                    "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git"
                 }
             ]
         }

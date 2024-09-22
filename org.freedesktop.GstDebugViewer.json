@@ -1,7 +1,7 @@
 {
     "app-id": "org.freedesktop.GstDebugViewer",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "47",
     "sdk": "org.gnome.Sdk",
     "command": "gst-debug-viewer",
     "rename-icon": "gst-debug-viewer",
@@ -28,8 +28,8 @@
                 {
                     "type": "git",
                     "disable-submodules": true,
-                    "tag": "1.22.12",
-                    "commit": "d2c02bb704b5804ca057fc7e6c7b16b4466fd7d5",
+                    "tag": "1.24.7",
+                    "commit": "0f1e984e41ce8d6d0758265d35e8b10d5815fde2",
                     "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git",
                     "x-checker-data": {
                         "type": "anitya",
@@ -37,18 +37,6 @@
                         "stable-only": true,
                         "tag-template": "$version"
                     }
-                },
-                {
-                    "type": "patch",
-                    "path": "gettext-py310-mr5027.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "chooser_native.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "find_bar_none.patch"
                 }
             ]
         }
